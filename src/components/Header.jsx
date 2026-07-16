@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Zap } from 'lucide-react';
 import './Header.css';
 
 function Header() {
@@ -19,11 +20,10 @@ function Header() {
       <div className={`nav-wrapper ${isOpen ? 'open' : ''}`}>
         <div className="nav-pill">
           <div className="logo-container">
-            <img 
-              src="https://via.placeholder.com/80x24/000000/FFFFFF?text=LOGO" 
-              alt="Brand Logo" 
-              className="logo-img" 
-            />
+            <a href="#" className="brand-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
+              <Zap color="#e54b2d" size={24} fill="#e54b2d" />
+              <span style={{ fontFamily: 'Anton, sans-serif', fontSize: '1.5rem', color: '#fff', letterSpacing: '1px' }}>STRIKE</span>
+            </a>
           </div>
           <button className="menu-btn" onClick={toggleMenu}>
             {isOpen ? 'CLOSE' : 'MENU'}
