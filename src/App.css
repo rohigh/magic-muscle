@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.app-main {
+  min-height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-text-bg {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  background: linear-gradient(180deg, #050505 0%, #1a0502 60%, #b23a23 100%);
+  color: #e54b2d;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400; /* Anton only has 400 weight */
+  text-align: center;
+  line-height: 0.85;
+  padding-bottom: 40px;
+}
+
+.title-large {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+}
+
+.title-medium {
+  font-size: 8rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.small-red {
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.hero-image-bg {
+  height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(120%);
+}

@@ -1,0 +1,35 @@
+/* BOUTIQUE THEME (Zenith Studio) */
+body.theme-boutique {
+  --bg-color: #fdfbf7;
+  --text-color: #4a4a4a;
+  --primary-color: #8abeb7; /* Pastel Teal/Green */
+  --secondary-color: #e0d8d0;
+  --font-family: 'Georgia', 'Times New Roman', serif;
+  --heading-font: 'Arial', sans-serif;
+  --border-radius: 20px; /* Very rounded corners */
+  --card-bg: #ffffff;
+  --card-border: none;
+  --card-shadow: 0 15px 35px rgba(138, 190, 183, 0.15);
+  --hero-bg-img: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80');
+  --hero-overlay: rgba(255,255,255,0.4);
+  --nav-bg: rgba(253, 251, 247, 0.85);
+}
+
+.theme-boutique .hero-content {
+  color: #333; /* Override hero text to be dark for light overlay */
+}
+
+.theme-boutique .logo {
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.theme-boutique h1, .theme-boutique h2, .theme-boutique h3 {
+  font-weight: 400;
+  color: #333;
+}
+
+.theme-boutique .btn-primary {
+  box-shadow: 0 8px 20px rgba(138, 190, 183, 0.4);
+  font-weight: 500;
+}

@@ -1,0 +1,136 @@
+.about-section {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 24px;
+  font-family: sans-serif;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.about-images-wrapper {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.about-img-main {
+  width: 70%;
+  border-radius: 12px;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(110%);
+  transition: filter 0.3s ease;
+}
+
+.about-img-main:hover {
+  filter: grayscale(0%);
+}
+
+.about-img-secondary {
+  width: 50%;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  border-radius: 12px;
+  border: 8px solid #000;
+  object-fit: cover;
+  filter: grayscale(100%) contrast(110%);
+  transition: filter 0.3s ease;
+}
+
+.about-img-secondary:hover {
+  filter: grayscale(0%);
+}
+
+.about-content-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-subtitle {
+  color: #e54b2d;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-subtitle::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #e54b2d;
+}
+
+.about-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  margin: 0 0 24px 0;
+}
+
+.about-title span {
+  color: #e54b2d;
+}
+
+.about-desc {
+  color: #a3a3a3;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.about-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-feature-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.about-icon-box {
+  background-color: rgba(229, 75, 45, 0.1);
+  color: #e54b2d;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-feature-text h4 {
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.about-feature-text p {
+  margin: 0;
+  color: #a3a3a3;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
