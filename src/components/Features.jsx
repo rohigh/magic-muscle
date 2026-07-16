@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Dumbbell, Users, Activity, Heart, Flame, Clock } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Features.css';
 
 const featureList = [
@@ -45,6 +46,7 @@ const images = [
 
 function Features() {
   const [currentImage, setCurrentImage] = useState(0);
+  const addToRefs = useScrollAnimation({ threshold: 0.1 });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -55,10 +57,10 @@ function Features() {
 
   return (
     <section id="features" className="why-choose-us-section">
-      <h2 className="why-title">WHY CHOOSE <span className="highlight-color">US?</span></h2>
+      <h2 className="why-title scroll-animate" ref={addToRefs}>WHY CHOOSE <span className="highlight-color">US?</span></h2>
       
       <div className="why-container">
-        <div className="why-image-wrapper">
+        <div className="why-image-wrapper scroll-animate" ref={addToRefs}>
           {images.map((img, idx) => (
             <img 
               key={idx}
@@ -71,7 +73,7 @@ function Features() {
         
         <div className="why-features-grid">
           {featureList.map((feat, idx) => (
-            <div key={idx} className="why-feature-card">
+            <div key={idx} className="why-feature-card scroll-animate" ref={addToRefs} style={{ transitionDelay: `${idx * 0.1}s` }}>
               <div className="why-icon">{feat.icon}</div>
               <h3 className="why-card-title">{feat.title}</h3>
               <p className="why-card-desc">{feat.desc}</p>

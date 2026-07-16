@@ -1,13 +1,16 @@
 import React from 'react';
 import { Target, Activity, ShieldCheck } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './About.css';
 
 function About() {
+  const addToRefs = useScrollAnimation({ threshold: 0.2 });
+
   return (
     <section id="about" className="about-section">
       <div className="about-container">
         
-        <div className="about-images-wrapper">
+        <div className="about-images-wrapper scroll-animate" ref={addToRefs}>
           <img 
             src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80" 
             alt="Gym weights" 
@@ -20,7 +23,7 @@ function About() {
           />
         </div>
 
-        <div className="about-content-wrapper">
+        <div className="about-content-wrapper scroll-animate" ref={addToRefs}>
           <div className="about-subtitle">Who We Are</div>
           <h2 className="about-title">
             EMPOWERING YOU TO ACHIEVE <span>YOUR FITNESS GOALS</span>

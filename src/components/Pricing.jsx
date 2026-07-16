@@ -1,14 +1,17 @@
 import React from 'react';
 import { Check, ArrowRight } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Pricing.css';
 
 const Pricing = () => {
+  const addToRefs = useScrollAnimation({ threshold: 0.1 });
+
   return (
     <section id="pricing" className="pricing-section">
       <div className="pricing-container">
         
         {/* Header */}
-        <div className="pricing-header">
+        <div className="pricing-header scroll-animate" ref={addToRefs}>
           <h2 className="pricing-title">
             IT'S YOUR TIME TO <span className="highlight-color">STRIKE!</span>
           </h2>
@@ -21,7 +24,7 @@ const Pricing = () => {
         <div className="pricing-grid">
           
           {/* Card 1: Annual */}
-          <div className="pricing-card standard-card">
+          <div className="pricing-card standard-card scroll-animate" ref={addToRefs} style={{ transitionDelay: '0s' }}>
             <div className="card-header">
               <h3 className="tier-name">ANNUAL</h3>
               <p className="tier-desc">Long-term commitment for the best value.</p>
@@ -56,7 +59,7 @@ const Pricing = () => {
           </div>
 
           {/* Card 2: Semi Annual (Highlighted) */}
-          <div className="pricing-card highlighted-card">
+          <div className="pricing-card highlighted-card scroll-animate" ref={addToRefs} style={{ transitionDelay: '0.15s' }}>
             {/* Top Highlight Accent */}
             <div className="highlight-accent" />
             
@@ -100,7 +103,7 @@ const Pricing = () => {
           </div>
 
           {/* Card 3: Group */}
-          <div className="pricing-card standard-card">
+          <div className="pricing-card standard-card scroll-animate" ref={addToRefs} style={{ transitionDelay: '0.3s' }}>
             <div className="card-header">
               <h3 className="tier-name">GROUP</h3>
               <p className="tier-desc">Train together, achieve together.</p>
@@ -135,7 +138,7 @@ const Pricing = () => {
         </div>
         
         {/* Footer Notes */}
-        <div className="pricing-footer">
+        <div className="pricing-footer scroll-animate" ref={addToRefs}>
           <p className="gst-note">*Prices mentioned are exclusive of GST.</p>
           <div className="cta-banner">
             <h3 className="cta-title">STILL NOT SURE?</h3>

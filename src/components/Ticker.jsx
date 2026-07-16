@@ -1,20 +1,36 @@
 import React from 'react';
-import { Star } from 'lucide-react';
+import './Ticker.css';
 
 function Ticker() {
-  // Duplicate items to ensure smooth infinite scrolling
   const items = [
-    "Personal Trainers", "Live Classes", "Strength & Conditioning", "Cardio Burn",
-    "Nutrition Plans", "Yoga & Pilates", "24/7 Access", "Premium Equipment"
+    "PERSONAL TRAINERS", 
+    "PERSONAL TRAINING", 
+    "LIVE CLASSES", 
+    "OUTDOOR & ONLINE TRAINING"
   ];
+
+  const CustomStar = () => (
+    <svg 
+      className="ticker-icon" 
+      width="24" height="24" 
+      viewBox="0 0 24 24" 
+      fill="none" 
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M12 2L15 10L23 12L15 14L12 22L9 14L1 12L9 10L12 2Z" fill="#000000"/>
+    </svg>
+  );
+
+  // Duplicate items 4 times to ensure a smooth, endless scroll loop
+  const duplicatedItems = [...items, ...items, ...items, ...items];
 
   return (
     <div className="ticker-wrap">
       <div className="ticker-content">
-        {[...items, ...items, ...items].map((text, i) => (
+        {duplicatedItems.map((text, i) => (
           <div className="ticker-item" key={i}>
-            <Star className="ticker-icon" size={24} fill="currentColor" />
             {text}
+            <CustomStar />
           </div>
         ))}
       </div>

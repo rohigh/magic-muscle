@@ -1,5 +1,6 @@
 import React from 'react';
 import { Activity, Dumbbell, Bike, Heart } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import './Classes.css';
 
 const programs = [
@@ -30,9 +31,11 @@ const programs = [
 ];
 
 function Classes() {
+  const addToRefs = useScrollAnimation({ threshold: 0.1 });
+
   return (
     <section id="programs" className="programs-section">
-      <div className="programs-header">
+      <div className="programs-header scroll-animate" ref={addToRefs}>
         <h2 className="programs-title">
           TOGETHER WE <span className="highlight-color">ACHIEVE!</span>
         </h2>
@@ -40,8 +43,8 @@ function Classes() {
       </div>
 
       <div className="programs-grid">
-        {programs.map((program) => (
-          <div key={program.id} className="program-card">
+        {programs.map((program, idx) => (
+          <div key={program.id} className="program-card scroll-animate" ref={addToRefs} style={{ transitionDelay: `${idx * 0.15}s` }}>
             <div 
               className="program-bg" 
               style={{ backgroundImage: `url(${program.image})` }}
