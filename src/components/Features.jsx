@@ -56,29 +56,27 @@ function Features() {
   }, []);
 
   return (
-    <section id="features" className="why-choose-us-section">
-      <h2 className="why-title scroll-animate" ref={addToRefs}>WHY CHOOSE <span className="highlight-color">US?</span></h2>
+    <section id="community" className="why-choose-us-section" style={{ padding: '80px 5%' }}>
+      <h2 className="why-title scroll-animate" ref={addToRefs}>THE <span className="highlight-color">COMMUNITY</span></h2>
       
-      <div className="why-container">
-        <div className="why-image-wrapper scroll-animate" ref={addToRefs}>
+      <div className="why-container" style={{ display: 'flex', flexDirection: 'column', gap: '2rem', alignItems: 'center' }}>
+        <div className="why-image-wrapper scroll-animate" ref={addToRefs} style={{ width: '100%', maxWidth: '1000px', height: '500px', borderRadius: '15px', overflow: 'hidden', position: 'relative' }}>
           {images.map((img, idx) => (
             <img 
               key={idx}
               src={img} 
               alt="Gym Facility" 
               className={`why-image ${idx === currentImage ? 'active' : ''}`}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', position: 'absolute', top: 0, left: 0, opacity: idx === currentImage ? 1 : 0, transition: 'opacity 1s ease-in-out' }}
             />
           ))}
         </div>
         
-        <div className="why-features-grid">
-          {featureList.map((feat, idx) => (
-            <div key={idx} className="why-feature-card scroll-animate" ref={addToRefs} style={{ transitionDelay: `${idx * 0.1}s` }}>
-              <div className="why-icon">{feat.icon}</div>
-              <h3 className="why-card-title">{feat.title}</h3>
-              <p className="why-card-desc">{feat.desc}</p>
-            </div>
-          ))}
+        <div className="community-text scroll-animate" ref={addToRefs} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', fontSize: '1.1rem', color: '#ccc', textAlign: 'justify', maxWidth: '800px', marginTop: '2rem' }}>
+          <h3 style={{ color: '#fff', fontSize: '2rem', marginBottom: '0.5rem', textAlign: 'center', textTransform: 'uppercase' }}>You'll Never Train Alone Here</h3>
+          <p>Walk in on any given morning and you'll notice it immediately - music playing, people talking across benches, and barely five people out of a hundred with earphones in. It's loud in the best way. It's not the coldest part of the gym you'll notice first - this is a no-AC space, and the mornings can genuinely bite - but you stop thinking about that the moment someone next to you offers a spot or a correction on your form.</p>
+          <p>New here? You won't need to pay for a personal trainer to get started. Members who've been training for five, six years become that for you - for free. They'll show you the right form, push you when a set gets tough, and tell you honestly when you're cutting corners.</p>
+          <p style={{ fontWeight: 'bold', color: '#e54b2d', textAlign: 'center', fontSize: '1.2rem', marginTop: '1rem' }}>That's the actual difference between Magic Muscle and every studio nearby: here, the community is the coaching staff.</p>
         </div>
       </div>
     </section>

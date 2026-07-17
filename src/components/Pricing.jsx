@@ -13,137 +13,85 @@ const Pricing = () => {
         {/* Header */}
         <div className="pricing-header scroll-animate" ref={addToRefs}>
           <h2 className="pricing-title">
-            IT'S YOUR TIME TO <span className="highlight-color">STRIKE!</span>
+            TWO WAYS TO <span className="highlight-color">TRAIN</span>
           </h2>
           <p className="pricing-subtitle">
-            MEMBERSHIP PLANS
+            MEMBERSHIP
           </p>
         </div>
 
         {/* Pricing Cards */}
-        <div className="pricing-grid">
+        <div className="pricing-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', maxWidth: '900px', margin: '0 auto' }}>
           
-          {/* Card 1: Annual */}
-          <div className="pricing-card standard-card scroll-animate" ref={addToRefs} style={{ transitionDelay: '0s' }}>
+          {/* Card 1: Basic */}
+          <div className="pricing-card standard-card scroll-animate" ref={addToRefs} style={{ transitionDelay: '0s', display: 'flex', flexDirection: 'column' }}>
             <div className="card-header">
-              <h3 className="tier-name">ANNUAL</h3>
-              <p className="tier-desc">Long-term commitment for the best value.</p>
+              <h3 className="tier-name">BASIC MEMBERSHIP</h3>
             </div>
             
             <div className="price-container">
-              <span className="price">₹1833</span>
-              <span className="price-period">/m</span>
+              <span className="price">₹600</span>
+              <span className="price-period">/month</span>
             </div>
-            <p className="billing-subtext">PAID ANNUALLY</p>
             
-            <button className="pricing-btn outline-btn">
-              Choose Annual
+            <button className="pricing-btn outline-btn" style={{ marginTop: '1rem' }}>
+              Choose Basic
             </button>
             
-            <div className="divider" />
+            <div className="divider" style={{ margin: '1.5rem 0' }} />
             
-            <ul className="feature-list">
-              {[
-                "Complete Gym Access", 
-                "Women's Zone", 
-                "Recovery Equipments", 
-                "Personalized Workout Plan", 
-                "12 Free Recovery Sessions"
-              ].map((feature, i) => (
-                <li key={i} className="feature-item">
-                  <Check className="feature-icon text-muted" />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
+            <p style={{ color: '#ccc', textAlign: 'left', lineHeight: '1.6', fontSize: '1.05rem', flex: 1 }}>
+              Full access to the gym and every piece of equipment. No personal trainer included - but you're never really on your own. New members are helped into a proper routine by the regulars and community around you from day one.
+            </p>
           </div>
 
-          {/* Card 2: Semi Annual (Highlighted) */}
-          <div className="pricing-card highlighted-card scroll-animate" ref={addToRefs} style={{ transitionDelay: '0.15s' }}>
+          {/* Card 2: Personal Training */}
+          <div className="pricing-card highlighted-card scroll-animate" ref={addToRefs} style={{ transitionDelay: '0.15s', display: 'flex', flexDirection: 'column' }}>
             {/* Top Highlight Accent */}
             <div className="highlight-accent" />
             
             <div className="card-header space-between">
               <div>
-                <h3 className="tier-name text-white">SEMI ANNUAL</h3>
-                <p className="tier-desc">Perfect balance of value and flexibility.</p>
+                <h3 className="tier-name text-white">PERSONAL TRAINING</h3>
               </div>
               <span className="popular-badge">
-                MOST POPULAR
+                RECOMMENDED
               </span>
             </div>
             
             <div className="price-container">
-              <span className="price">₹11,999</span>
+              <span className="price">₹3,600</span>
+              <span className="price-period" style={{ color: '#fff' }}>/month</span>
             </div>
-            <p className="billing-subtext">TOTAL FOR 6 MONTHS</p>
             
-            <button className="pricing-btn solid-btn">
-              Choose 6 Months
+            <button className="pricing-btn solid-btn" style={{ marginTop: '1rem' }}>
+              Choose PT
               <ArrowRight size={16} />
             </button>
             
-            <div className="divider" />
+            <div className="divider" style={{ margin: '1.5rem 0' }} />
             
-            <ul className="feature-list">
-              {[
-                "Complete Gym Access", 
-                "Women's Zone", 
-                "Recovery Equipments", 
-                "Regular Fitness Analysis", 
-                "Guidance to reach goals", 
-                "6 Free Recovery Sessions"
-              ].map((feature, i) => (
-                <li key={i} className="feature-item text-white">
-                  <Check className="feature-icon text-white" />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Card 3: Group */}
-          <div className="pricing-card standard-card scroll-animate" ref={addToRefs} style={{ transitionDelay: '0.3s' }}>
-            <div className="card-header">
-              <h3 className="tier-name">GROUP</h3>
-              <p className="tier-desc">Train together, achieve together.</p>
-            </div>
-            
-            <div className="price-container">
-              <span className="price">₹5999</span>
-            </div>
-            <p className="billing-subtext">PER MONTH ONWARDS</p>
-            
-            <button className="pricing-btn outline-btn">
-              Choose Group
-            </button>
-            
-            <div className="divider" />
-            
-            <ul className="feature-list">
-              {[
-                "12 Sessions", 
-                "Group Fitness Training", 
-                "Gym Membership Exempt", 
-                "Personalized Workout Plan"
-              ].map((feature, i) => (
-                <li key={i} className="feature-item">
-                  <Check className="feature-icon text-muted" />
-                  <span>{feature}</span>
-                </li>
-              ))}
-            </ul>
+            <p style={{ color: '#fff', textAlign: 'left', lineHeight: '1.6', fontSize: '1.05rem', flex: 1 }}>
+              One-on-one coaching, built from close to a decade of real training experience - programming, form correction, and a plan built around your goals.
+            </p>
           </div>
 
         </div>
         
-        {/* Footer Notes */}
+        {/* CTA Banner */}
         <div className="pricing-footer scroll-animate" ref={addToRefs}>
-          <p className="gst-note">*Prices mentioned are exclusive of GST.</p>
           <div className="cta-banner">
             <h3 className="cta-title">STILL NOT SURE?</h3>
             <button className="cta-btn">Get 1 free entry</button>
           </div>
+        </div>
+
+        {/* Experience Section */}
+        <div className="experience-section scroll-animate" ref={addToRefs} style={{ maxWidth: '800px', margin: '5rem auto 0', textAlign: 'center', backgroundColor: '#1a1a1a', padding: '3rem', borderRadius: '15px', border: '1px solid #333' }}>
+          <h3 style={{ fontSize: '1.8rem', color: '#fff', marginBottom: '1.5rem', textTransform: 'uppercase' }}>Ten Years in the Industry, Now Here for You</h3>
+          <p style={{ fontSize: '1.1rem', color: '#ccc', lineHeight: '1.8' }}>
+            Before I opened Magic Muscle, I worked as a personal trainer for nearly a decade, training all kinds of clients, including some recognizable names in the industry. Today, that same experience is available to every member who walks through this gate - whether you choose the basic membership or one-on-one coaching.
+          </p>
         </div>
 
       </div>

@@ -10,7 +10,6 @@ function Header() {
   const navItems = [
     { name: 'HOME', link: '#' },
     { name: 'PRICING', link: '#pricing' },
-    { name: 'PROGRAMS', link: '#programs' },
     { name: 'ABOUT', link: '#about' },
     { name: 'CONTACT', link: '#contact' }
   ];
@@ -22,7 +21,7 @@ function Header() {
           <div className="logo-container">
             <a href="#" className="brand-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
               <Zap color="#e54b2d" size={24} fill="#e54b2d" />
-              <span style={{ fontFamily: 'Anton, sans-serif', fontSize: '1.5rem', color: '#fff', letterSpacing: '1px' }}>STRIKE</span>
+              <span style={{ fontFamily: 'Anton, sans-serif', fontSize: '1.5rem', color: '#fff', letterSpacing: '1px' }}>MAGIC MUSCLE</span>
             </a>
           </div>
           <button className="menu-btn" onClick={toggleMenu}>

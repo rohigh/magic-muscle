@@ -6,7 +6,6 @@ import Features from './components/Features';
 import About from './components/About';
 import Classes from './components/Classes';
 import Pricing from './components/Pricing';
-import CircularGallery from './components/CircularGallery';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -26,7 +25,6 @@ function App() {
       <Features />
       <About />
       <Classes />
-      <CircularGallery />
       <Pricing />
       <Footer />
     </div>

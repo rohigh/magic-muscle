@@ -5,8 +5,7 @@ function Ticker() {
   const items = [
     "PERSONAL TRAINERS", 
     "PERSONAL TRAINING", 
-    "LIVE CLASSES", 
-    "OUTDOOR & ONLINE TRAINING"
+    "LIVE CLASSES"
   ];
 
   const CustomStar = () => (

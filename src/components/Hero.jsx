@@ -29,49 +29,50 @@ function Hero() {
   return (
     <div className="hero-content">
       <h1 className="hero-heading">
-        YOUR BODY CAN{' '}
-        <span className="scrolling-words-wrapper">
-          <span className="scrolling-words-inner highlight">
-            <span>ENDURE</span>
-            <span>CONQUER</span>
-            <span>OVERCOME</span>
-            <span>MASTER</span>
-            <span>WITHSTAND</span>
-            <span>ENDURE</span>
-          </span>
-        </span>
-        {' '}ANYTHING.
+        WHERE EVERYONE LIFTS <span className="highlight">TOGETHER</span>
       </h1>
       <div className="hero-description-box">
         <p className="hero-description">
-          It's your mind that needs convincing. Push past your limits, stay committed, and watch as your body transform into powerhouse of strength and resilience. Start your journey today & truly capable of!
+          A terrace gym in Kanchipuram where a decade of real training experience, heavy iron, and a room full of people who show up for each other will get you off the couch - every single morning.
         </p>
       </div>
       
       <div className="hero-stats">
         <div className="stat-item">
-          <h3 className="stat-number"><AnimatedNumber end={1200} /></h3>
+          <h3 className="stat-number"><AnimatedNumber end={100} /></h3>
           <p className="stat-text">Active Members</p>
         </div>
         <div className="stat-item">
-          <h3 className="stat-number"><AnimatedNumber end={12} /></h3>
-          <p className="stat-text">Certified Trainers</p>
+          <h3 className="stat-number"><AnimatedNumber end={10} /></h3>
+          <p className="stat-text">Years Of Experience</p>
         </div>
         <div className="stat-item">
-          <h3 className="stat-number"><AnimatedNumber end={20} /></h3>
-          <p className="stat-text">Year Of Experience</p>
+          <h3 className="stat-number"><AnimatedNumber end={4} /></h3>
+          <p className="stat-text">Years at this Location</p>
         </div>
       </div>
 
       <div className="hero-buttons">
-        <button className="btn-primary">
-          Get Started 
+        <a 
+          href="https://www.google.com/maps/dir//Muscle+Magic+(Unisex+Fitness+Centre),+SH4+Second+Floor,+Vandavasi+Main+Road,+opp.+SP+Bangalow,+near+Collector+office,+Kanchipuram,+Tamil+Nadu+631501/@13.090816,80.2226176,11z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3a52c34f9dbdb023:0xa47e863badccfdfe!2m2!1d79.6962344!2d12.8202925?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="btn-primary"
+          style={{ textDecoration: 'none' }}
+        >
+          Visit Us 
           <span className="icon-circle">↗</span>
-        </button>
-        <button className="btn-secondary">
-          Explore More 
+        </a>
+        <a 
+          href="https://wa.me/918667626438?text=Hi!%20I%20would%20like%20to%20book%20a%20free%20trial%20session."
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="btn-secondary"
+          style={{ textDecoration: 'none' }}
+        >
+          Book a Trial Session
           <span className="icon-circle">↗</span>
-        </button>
+        </a>
       </div>
     </div>
   );
